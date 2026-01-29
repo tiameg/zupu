@@ -84,7 +84,7 @@ export function FamilyMembersTable({
     sibling_order: "",
     father_id: "",
     gender: "",
-    official_position: "",
+    // official_position: "",
     is_alive: true,
     spouse: "",
     remarks: "",
@@ -176,7 +176,7 @@ export function FamilyMembersTable({
       sibling_order: "",
       father_id: "",
       gender: "",
-      official_position: "",
+      // official_position: "",
       is_alive: true,
       spouse: "",
       remarks: "",
@@ -202,7 +202,7 @@ export function FamilyMembersTable({
       sibling_order: member.sibling_order?.toString() ?? "",
       father_id: member.father_id?.toString() ?? "null",
       gender: member.gender ?? "",
-      official_position: member.official_position ?? "",
+      // official_position: member.official_position ?? "",
       is_alive: member.is_alive,
       spouse: member.spouse ?? "",
       remarks: member.remarks ?? "",
@@ -239,7 +239,7 @@ export function FamilyMembersTable({
         ? parseInt(formData.father_id) 
         : null,
       gender: (formData.gender as "男" | "女") || null,
-      official_position: formData.official_position || null,
+      // official_position: formData.official_position || null,
       is_alive: formData.is_alive,
       spouse: formData.spouse || null,
       remarks: formData.remarks || null,
@@ -449,7 +449,7 @@ export function FamilyMembersTable({
                 </div>
 
                 {/* 官职 */}
-                <div className="grid grid-cols-4 items-center gap-4">
+                {/* <div className="grid grid-cols-4 items-center gap-4">
                   <Label htmlFor="official_position" className="text-right">
                     官职
                   </Label>
@@ -464,7 +464,7 @@ export function FamilyMembersTable({
                     }
                     className="col-span-3"
                   />
-                </div>
+                </div> */}
 
                 {/* 是否在世 */}
                 <div className="grid grid-cols-4 items-center gap-4">
@@ -577,7 +577,7 @@ export function FamilyMembersTable({
               <TableHead>生日</TableHead>
               <TableHead>卒年</TableHead>
               <TableHead>居住地</TableHead>
-              <TableHead>官职</TableHead>
+              {/* <TableHead>官职</TableHead> */}
               <TableHead className="w-20">在世</TableHead>
               <TableHead>配偶</TableHead>
               <TableHead>生平事迹</TableHead>
@@ -669,7 +669,7 @@ export function FamilyMembersTable({
                       : "-"}
                   </TableCell>
                   <TableCell>{member.residence_place ?? "-"}</TableCell>
-                  <TableCell>{member.official_position ?? "-"}</TableCell>
+                  {/* <TableCell>{member.official_position ?? "-"}</TableCell> */}
                   <TableCell>{member.is_alive ? "是" : "否"}</TableCell>
                   <TableCell>{member.spouse ?? "-"}</TableCell>
                   <TableCell>

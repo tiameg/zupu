@@ -89,7 +89,7 @@ export function MemberSelect({
                   />
                   <span>{member.name}</span>
                   <span className="ml-2 text-xs text-muted-foreground">
-                    (第{member.generation}世)
+                    (第{member.generation}代)
                   </span>
                 </div>
               ))

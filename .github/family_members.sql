@@ -26,7 +26,7 @@ COMMENT ON COLUMN family_members.generation IS '世代';
 COMMENT ON COLUMN family_members.sibling_order IS '排行';
 COMMENT ON COLUMN family_members.father_id IS '父亲的 ID (外键关联 ID 字段)';
 COMMENT ON COLUMN family_members.gender IS '性别';
-COMMENT ON COLUMN family_members.official_position IS '官职';
+-- COMMENT ON COLUMN family_members.official_position IS '官职';
 COMMENT ON COLUMN family_members.is_alive IS '是否在世';
 COMMENT ON COLUMN family_members.spouse IS '配偶姓名';
 COMMENT ON COLUMN family_members.remarks IS '生平事迹';

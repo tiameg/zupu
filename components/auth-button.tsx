@@ -17,9 +17,11 @@ export async function AuthButton() {
         你好, {user.email}!
       </span>
       <div className="flex flex-col md:flex-row gap-2 w-full md:w-auto">
-        <Button asChild size="sm" variant={"outline"} className="w-full md:w-auto">
-          <Link href="/family-tree">数据维护</Link>
-        </Button>
+        {user.email === process.env.NEXT_PUBLIC_LOGIN_EMAIL && (
+          <Button asChild size="sm" variant={"outline"} className="w-full md:w-auto">
+            <Link href="/family-tree">数据维护</Link>
+          </Button>
+        )}
         <LogoutButton className="w-full md:w-auto" />
       </div>
     </div>

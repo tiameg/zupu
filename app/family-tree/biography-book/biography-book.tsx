@@ -53,7 +53,7 @@ const MemberPage = memo(function MemberPage({
                                 {member.name}
                             </h2>
                             <p className="text-xs text-stone-500 font-serif mt-0.5">
-                                {member.generation ? `第 ${member.generation} 世` : "世代未知"}
+                                {member.generation ? `第 ${member.generation} 代` : "世代未知"}
                                 {member.sibling_order ? ` · 行 ${member.sibling_order}` : ""}
                             </p>
                         </div>
@@ -137,7 +137,7 @@ const MemberPage = memo(function MemberPage({
                             <p className="text-sm text-stone-700">{member.residence_place}</p>
                         </div>
                     )}
-                    {member.official_position && (
+                    {/* {member.official_position && (
                         <div className="space-y-0.5 col-span-2">
                             <span className="text-[10px] font-bold text-stone-400 uppercase tracking-wider">
                                 官职/头衔
@@ -146,7 +146,7 @@ const MemberPage = memo(function MemberPage({
                                 {member.official_position}
                             </p>
                         </div>
-                    )}
+                    )} */}
                 </div>
 
                 {/* 分隔线 */}
@@ -428,7 +428,7 @@ export function BiographyBook({ members }: BiographyBookProps) {
                                             <p className="text-white font-medium">{member.name}</p>
                                             <p className="text-xs text-stone-400">
                                                 {member.generation
-                                                    ? `第 ${member.generation} 世`
+                                                    ? `第 ${member.generation} 代`
                                                     : "世代未知"}
                                                 {" · "}第 {index + 1} 页
                                             </p>

@@ -120,7 +120,7 @@ function FamilyMemberNodeComponent({ data }: FamilyNodeProps) {
         <div className="flex items-center gap-1.5 flex-wrap justify-center">
           {nodeData.generation !== null && (
             <Badge variant={nodeData.is_alive ? "secondary" : "outline"} className={cn("text-xs", !nodeData.is_alive && "opacity-80")}>
-              第{nodeData.generation}世
+              第{nodeData.generation}代
             </Badge>
           )}
           {nodeData.sibling_order !== null && (

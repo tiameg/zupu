@@ -207,14 +207,14 @@ export function MemberDetailDialog({
                 {/* Content Body */}
                 <div className="flex-1 p-5 sm:p-8 overflow-hidden flex flex-col font-serif">
                   
-                  {member.official_position && (
+                  {/* {member.official_position && (
                     <div className="mb-4 sm:mb-6 pb-3 sm:pb-4 border-b border-stone-200 dark:border-stone-700 border-dashed shrink-0">
                       <span className="text-[10px] sm:text-xs font-bold text-stone-400 dark:text-stone-500 uppercase tracking-wider block mb-2">官职 / 头衔</span>
                       <p className="text-base sm:text-lg font-medium text-stone-800 dark:text-stone-200 bg-stone-100/50 dark:bg-stone-800/50 p-2 sm:p-3 rounded border border-stone-100 dark:border-stone-700 inline-block">
                         {member.official_position}
                       </p>
                     </div>
-                  )}
+                  )} */}
 
                   <div className="flex-1 min-h-0 flex flex-col">
                      <span className="text-[10px] sm:text-xs font-bold text-stone-400 dark:text-stone-500 uppercase tracking-wider block mb-2 shrink-0">详细记载</span>

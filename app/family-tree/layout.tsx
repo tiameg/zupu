@@ -20,9 +20,9 @@ export default function FamilyTreeLayout({
           </Link>
 
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-            <Link href="/family-tree" className="hover:text-primary transition-colors">
+            {/* <Link href="/family-tree" className="hover:text-primary transition-colors">
               成员列表
-            </Link>
+            </Link> */}
             <Link href="/family-tree/graph" className="hover:text-primary transition-colors">
               2D 族谱
             </Link>

@@ -1,5 +1,7 @@
 import { Suspense } from "react";
 import { FamilyMembersLoader } from "./family-members-loader";
+import { createClient } from "@/lib/supabase/server";
+import { redirect } from "next/navigation";
 
 interface PageProps {
   searchParams: Promise<{ page?: string; search?: string }>;
@@ -40,7 +42,15 @@ async function FamilyMembersWrapper({
   return <FamilyMembersLoader page={page} pageSize={pageSize} search={search} />;
 }
 
-export default function FamilyTreePage({ searchParams }: PageProps) {
+export default async function FamilyTreePage({ searchParams }: PageProps) {
+  const supabase = await createClient();
+  const { data } = await supabase.auth.getClaims();
+  const user = data?.claims;
+
+  if (user?.email !== process.env.NEXT_PUBLIC_LOGIN_EMAIL) {
+    redirect("/family-tree/graph");
+  }
+
   return (
     <div className="container mx-auto py-8 px-4">
       <h1 className="text-3xl font-bold mb-6">族谱成员列表</h1>

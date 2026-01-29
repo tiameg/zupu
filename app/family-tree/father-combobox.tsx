@@ -43,7 +43,7 @@ export function FatherCombobox({
     return options.filter((opt) => {
       const matchName = opt.name.toLowerCase().includes(lowerQuery);
       const matchGen = opt.generation?.toString() === lowerQuery;
-      const matchGenText = `第${opt.generation}世`.includes(lowerQuery);
+      const matchGenText = `第${opt.generation}代`.includes(lowerQuery);
       return matchName || matchGen || matchGenText;
     });
   }, [options, searchQuery]);

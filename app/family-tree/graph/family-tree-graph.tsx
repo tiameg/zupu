@@ -264,7 +264,7 @@ function getLayoutedElements(
       position: { x: labelX, y: labelY },
       data: {
         generation,
-        label: `第${toChineseNum(generation)}世`
+        label: `第${toChineseNum(generation)}代`
       },
       draggable: false,
       selectable: false,

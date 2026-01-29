@@ -55,7 +55,7 @@ export async function fetchFamilyStatistics(): Promise<{
   // 2. Generation Statistics
   const generationCounts = members.reduce(
     (acc, member) => {
-      const gen = member.generation ? `第${member.generation}世` : "未知";
+      const gen = member.generation ? `第${member.generation}代` : "未知";
       acc[gen] = (acc[gen] || 0) + 1;
       return acc;
     },
